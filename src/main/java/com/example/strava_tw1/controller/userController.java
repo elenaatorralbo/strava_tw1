@@ -4,8 +4,6 @@ import com.example.strava_tw1.dto.userDTO;
 import com.example.strava_tw1.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.time.Instant;
-import org.springframework.stereotype.Service;
 
 @RestController
 @RequestMapping("/api/user")
@@ -15,8 +13,14 @@ public class userController {
     private userService userService;
 
     @PostMapping("/register")
-    public String register(@RequestBody userDTO user) {
-        return userService.register(user);
+    public String register(@RequestBody userDTO user, @RequestParam String method) {
+        if (method.equals("google")) {
+            return userService.registerWithGoogle(user);
+        } else if (method.equals("facebook")) {
+            return userService.registerWithFacebook(user);
+        } else {
+            return "Error: Invalid registration method. Please use 'google' or 'facebook'.";
+        }
     }
 
     @PostMapping("/login")

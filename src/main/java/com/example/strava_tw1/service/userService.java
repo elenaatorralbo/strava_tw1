@@ -6,13 +6,24 @@ import java.time.Instant;
 
 @Service
 public class userService {
-    public String register(userDTO user) {
-        // Simulate registration logic
-        return "User registered with email: " + user.getEmail();
+
+    public String registerWithGoogle(userDTO user) {
+        // Lógica de registro para Google
+        return "User registered with Google: " + user.getEmail();
+    }
+
+    public String registerWithFacebook(userDTO user) {
+        // Lógica de registro para Facebook
+        return "User registered with Facebook: " + user.getEmail();
     }
 
     public String login(String email, String method) {
-        // Simulate login logic
+        // Verificar método de autenticación
+        if (!method.equals("google") && !method.equals("facebook")) {
+            return "Error: Invalid authentication method. Please use 'google' or 'facebook'.";
+        }
+
+        // Simulación de generación de token
         String token = "TokenGeneratedFor: " + email + "-" + Instant.now().toEpochMilli();
         return token;
     }
