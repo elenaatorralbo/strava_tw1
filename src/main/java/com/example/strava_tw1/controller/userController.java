@@ -4,6 +4,8 @@ import com.example.strava_tw1.dto.userDTO;
 import com.example.strava_tw1.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.time.Instant;
+import org.springframework.stereotype.Service;
 
 @RestController
 @RequestMapping("/api/user")

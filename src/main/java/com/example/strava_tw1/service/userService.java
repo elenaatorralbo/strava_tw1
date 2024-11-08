@@ -2,6 +2,7 @@ package com.example.strava_tw1.service;
 
 import com.example.strava_tw1.dto.userDTO;
 import org.springframework.stereotype.Service;
+import java.time.Instant;
 
 @Service
 public class userService {
@@ -12,6 +13,7 @@ public class userService {
 
     public String login(String email, String method) {
         // Simulate login logic
-        return "TokenGeneratedFor:" + email;
+        String token = "TokenGeneratedFor: " + email + "-" + Instant.now().toEpochMilli();
+        return token;
     }
 }
