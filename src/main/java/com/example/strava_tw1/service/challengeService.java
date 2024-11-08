@@ -63,11 +63,11 @@ public class challengeService {
             String sport = challenge.getSport();
 
             // Filtrar sesiones del mismo deporte dentro del periodo del challenge
-            int totalValue = sessions.stream()
+            int totalValue = (int) sessions.stream()
                     .filter(session -> session.getSport().equalsIgnoreCase(sport) &&
                             session.getStartDate().compareTo(challenge.getStartDate()) >= 0 &&
                             session.getStartDate().compareTo(challenge.getEndDate()) <= 0)
-                    .mapToInt(session -> goalType.equals("distance") ? (int) session.getDistance() : Integer.parseInt(session.getDuration()))
+                    .mapToDouble(session -> goalType.equals("distance") ? session.getDistance() : Integer.parseInt(session.getDuration()))
                     .sum();
 
             int progressPercentage = (totalValue * 100) / goalValue;
