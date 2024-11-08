@@ -7,13 +7,13 @@ import java.util.List;
 
 @Service
 public class sessionService {
+    private final List<sessionDTO> sessions = new ArrayList<>();
     public String createSession(sessionDTO session) {
         // Simulate session creation logic
         return "Session created: " + session.getTitle();
     }
 
     public List<sessionDTO> getSessions() {
-        // Simulate retrieving sessions (returning an empty list)
-        return new ArrayList<>();
+        return sessions;
     }
 }
