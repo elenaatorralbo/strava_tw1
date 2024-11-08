@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    public String register(UserDTO user) {
+    public String register(userDTO user) {
         // Simulate registration logic
         return "User registered with email: " + user.getEmail();
     }
