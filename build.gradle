@@ -30,4 +30,3 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-/* hola*/
