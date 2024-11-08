@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/challenge")
-public class ChallengeController {
+public class challengeController {
 
     @Autowired
     private challengeService challengeService;

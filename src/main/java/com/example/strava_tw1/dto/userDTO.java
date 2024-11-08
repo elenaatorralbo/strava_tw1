@@ -1,6 +1,6 @@
 package com.example.strava_tw1.dto;
 
-public class UserDTO {
+public class userDTO {
     private String email;
     private String name;
     private String birthdate;
@@ -9,6 +9,13 @@ public class UserDTO {
     private Integer maxHeartRate;
     private Integer restHeartRate;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getName() {
         return name;
@@ -48,52 +55,6 @@ public class UserDTO {
 
     public void setMaxHeartRate(Integer maxHeartRate) {
         this.maxHeartRate = maxHeartRate;
-    }public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
-    }
-
-    public Double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
-
-    public Double getHeight() {
-        return height;
-    }
-
-    public void setHeight(Double height) {
-        this.height = height;
-    }
-
-    public Integer getMaxHeartRate() {
-        return maxHeartRate;
-    }
-
-    public void setMaxHeartRate(Integer maxHeartRate) {
-        this.maxHeartRate = maxHeartRate;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Integer getRestHeartRate() {

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class SessionService {
-    public String createSession(SessionDTO session) {
+public class sessionService {
+    public String createSession(sessionDTO session) {
         // Simulate session creation logic
         return "Session created: " + session.getTitle();
     }

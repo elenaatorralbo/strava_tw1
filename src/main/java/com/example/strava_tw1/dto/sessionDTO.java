@@ -1,6 +1,6 @@
 package com.example.strava_tw1.dto;
 
-public class SessionDTO {
+public class sessionDTO {
     private String title;
     private String sport;
     private Double distance;

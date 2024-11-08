@@ -4,7 +4,7 @@ import com.example.strava_tw1.dto.userDTO;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class userService {
     public String register(userDTO user) {
         // Simulate registration logic
         return "User registered with email: " + user.getEmail();

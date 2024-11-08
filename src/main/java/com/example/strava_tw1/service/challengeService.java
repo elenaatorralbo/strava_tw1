@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ChallengeService {
+public class challengeService {
     public String createChallenge(challengeDTO challenge) {
         // Simulate challenge creation logic
         return "Challenge created: " + challenge.getName();

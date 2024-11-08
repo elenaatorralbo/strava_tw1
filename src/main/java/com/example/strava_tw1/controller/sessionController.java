@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/session")
-public class SessionController {
+public class sessionController {
 
     @Autowired
     private sessionService sessionService;

@@ -1,6 +1,6 @@
 package com.example.strava_tw1.dto;
 
-public class ChallengeDTO {
+public class challengeDTO {
     private String name;
     private String startDate;
     private String endDate;
