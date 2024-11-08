@@ -15,12 +15,12 @@ public class sessionController {
     private sessionService sessionService;
 
     @PostMapping("/create")
-    public String createSession(@RequestBody sessionDTO session) {
-        return sessionService.createSession(session);
+    public String createSession(@RequestBody sessionDTO session, @RequestParam String token) {
+        return sessionService.createSession(session, token);
     }
 
     @GetMapping("/get")
-    public List<sessionDTO> getSessions() {
-        return sessionService.getSessions();
+    public List<sessionDTO> getSessions(@RequestParam String token) {
+        return sessionService.getSessions(token);
     }
 }

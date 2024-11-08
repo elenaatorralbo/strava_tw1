@@ -7,6 +7,7 @@ public class sessionDTO {
     private String startDate;
     private String startTime;
     private String duration;
+    private String token;
 
     // Getters and Setters
 
@@ -57,5 +58,13 @@ public class sessionDTO {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
