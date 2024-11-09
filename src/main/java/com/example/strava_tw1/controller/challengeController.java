@@ -22,11 +22,10 @@ public class challengeController {
 
     @GetMapping("/active")
     public List<challengeDTO> getActiveChallenges(
-            @RequestParam String token,
             @RequestParam(required = false) String sport,
             @RequestParam(required = false) String startDate,
             @RequestParam(required = false) String endDate) {
-        return challengeService.getActiveChallenges(token, sport, startDate, endDate);
+        return challengeService.getActiveChallenges( sport, startDate, endDate);
     }
 
     @PostMapping("/accept")

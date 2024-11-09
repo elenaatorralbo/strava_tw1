@@ -25,7 +25,7 @@ public class challengeService {
     }
 
     // Listar los últimos 5 challenges activos por fecha
-    public List<challengeDTO> getActiveChallenges(String token, String sport, String startDate, String endDate) {
+    public List<challengeDTO> getActiveChallenges( String sport, String startDate, String endDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         return challenges.stream()
